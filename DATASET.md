@@ -1,20 +1,3 @@
-Perfecto, aquí tienes el contenido completo del archivo **`DATASET.md`**, listo para **copiar y pegar** en ese editor de GitHub donde ya estás.
-
-Incluye:
-
-* Descripción general del dataset
-* Explicación de cada archivo
-* Campos relevantes
-* Campos que no usaremos
-* Justificación de selección
-* Cómo lo aprovecharemos para recomendaciones basadas en contenido
-
----
-
-# ⭐ **COPIA Y PEGA EN TU ARCHIVO `DATASET.md`**
-
----
-
 # 📄 **Documentación del Dataset — The Movies Dataset (Kaggle)**
 
 ## 📌 **Descripción General**
