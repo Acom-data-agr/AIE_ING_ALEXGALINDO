@@ -1,3 +1,20 @@
+Perfecto, aquí tienes el contenido completo del archivo **`DATASET.md`**, listo para **copiar y pegar** en ese editor de GitHub donde ya estás.
+
+Incluye:
+
+* Descripción general del dataset
+* Explicación de cada archivo
+* Campos relevantes
+* Campos que no usaremos
+* Justificación de selección
+* Cómo lo aprovecharemos para recomendaciones basadas en contenido
+
+---
+
+# ⭐ **COPIA Y PEGA EN TU ARCHIVO `DATASET.md`**
+
+---
+
 # 📄 **Documentación del Dataset — The Movies Dataset (Kaggle)**
 
 ## 📌 **Descripción General**
@@ -16,6 +33,8 @@ Contiene metadatos de **más de 45,000 películas**, incluyendo:
 * Ratings de usuarios (MovieLens)
 
 El dataset combina información de **TMDB** y **MovieLens**, permitiendo construir sistemas de recomendación tanto de **contenido** como **colaborativos**.
+
+---
 
 # 🗂️ **Archivos del Dataset**
 
@@ -44,6 +63,7 @@ Archivo principal con metadatos de 45k+ películas.
 * Algunos campos vienen como JSON en formato string.
 * Tiene valores faltantes o inconsistentes en budget, revenue, y dates.
 
+---
 
 ## 2️⃣ **keywords.csv**
 
@@ -55,6 +75,8 @@ Contiene las palabras clave asociadas a cada película.
 | `keywords` | Lista de keywords en formato JSON |
 
 **Uso:** enriquecer el contenido textual de cada película.
+
+---
 
 ## 3️⃣ **credits.csv**
 
@@ -69,6 +91,8 @@ Contiene el reparto (cast) y equipo técnico (crew).
 **Uso en este proyecto:**
 Solo usaremos nombres de actores principales o el director para enriquecer el contenido textual.
 
+---
+
 ## 4️⃣ **links.csv**
 
 Contiene IDs cruzados entre:
@@ -79,11 +103,15 @@ Contiene IDs cruzados entre:
 
 **No lo usaremos para este prototipo.**
 
+---
+
 ## 5️⃣ **links_small.csv**
 
 Versión reducida para pruebas rápidas.
 
 **No se utilizará en este proyecto.**
+
+---
 
 ## 6️⃣ **ratings_small.csv**
 
@@ -99,6 +127,8 @@ Contiene ~100k ratings de usuarios sobre 9k películas.
 
 **No se usará en este proyecto**, porque no implementaremos filtrado colaborativo.
 
+---
+
 # 🧪 **Archivos que usaremos para el prototipo de recomendación basada en contenido**
 
 | Archivo                 | ¿Lo usamos? | Razón                                                               |
@@ -107,6 +137,8 @@ Contiene ~100k ratings de usuarios sobre 9k películas.
 | **keywords.csv**        | ✔️          | Enriquecen el contexto semántico del contenido.                     |
 | **credits.csv**         | ✔️          | Podemos extraer nombres de actores/directores como texto adicional. |
 
+---
+
 # 🚫 **Archivos que NO usaremos**
 
 | Archivo             | Motivo                                                            |
@@ -114,6 +146,8 @@ Contiene ~100k ratings de usuarios sobre 9k películas.
 | `ratings_small.csv` | Es para recomendaciones colaborativas (no aplicará en esta fase). |
 | `links.csv`         | IDs cruzados innecesarios para nuestro objetivo.                  |
 | `links_small.csv`   | Redundante al no trabajar con ratings.                            |
+
+---
 
 # 🎯 **Justificación del Subconjunto Seleccionado**
 
@@ -128,6 +162,7 @@ Los archivos seleccionados permiten construir un texto enriquecido que incluirá
 
 Con esto formaremos un campo combinado, por ejemplo:
 
+```
 "La historia de un detective... Géneros: acción, crimen... Palabras clave: investigation, murder... Actores: Robert De Niro..."
 ```
 
@@ -153,6 +188,8 @@ El prototipo seguirá este flujo:
 
    que devuelva películas similares en su contenido.
 
+---
+
 # ⚠️ **Limitaciones del dataset**
 
 * Contiene valores faltantes en muchos campos.
@@ -160,6 +197,8 @@ El prototipo seguirá este flujo:
 * JSONs vienen como strings, deben parsearse.
 * No todos los `id` coinciden entre archivos (requiere merge cuidadoso).
 * No es ideal para modelos colaborativos sin usar ratings completos.
+
+---
 
 # 📚 **Referencias**
 
@@ -171,4 +210,3 @@ TMDB API:
 
 MovieLens:
 [https://grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/)
-
